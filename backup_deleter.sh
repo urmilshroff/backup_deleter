@@ -4,7 +4,7 @@ while true
 do
     backup=$(tmutil listlocalsnapshots / | head -1) #stores oldest backup name
     
-    echo -e "\nWhat would you like to do?\n1. Display all backups\n2. Delete oldest backup\n3. Delete all backups\n4. Check storage status\n5. Exit"
+    echo -e "\nWhat would you like to do?\n1. Display all backups\n2. Delete oldest backup\n3. Delete all backups\n4. Check storage status\n5. Uninstall\n6. Exit"
     read choice
 
     case $choice in
@@ -61,6 +61,22 @@ do
         ;;
         
         5)
+        echo -e "\nAre you sure you want to uninstall backup_deleter? Y/N"
+        read choice
+        
+        if [ $choice == "Y" -o $choice == "y" ]
+        then #uninstall
+            echo -e "Uninstalling..."
+            rm /usr/local/bin/backup_deleter
+            echo -e "Uninstalled."
+            break
+            
+        else
+            echo -e "Uninstall aborted."
+        fi
+        ;;
+        
+        6)
         break
         ;;
         
