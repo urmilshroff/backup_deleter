@@ -1,17 +1,12 @@
 #!/bin/bash
 
-echo -e "\nWARNING: I AM NOT RESPONSIBLE FOR ANY DAMAGE(S) THIS MAY CAUSE TO YOU OR YOUR COMPUTER!"
-
-echo -e "\nThis will install a script to manage local Time Machine backups that get created automatically on macOS High Sierra or above. Please use with caution and only on a Macintosh computer running macOS 10.13 or higher."
-
-
-if [ $(uname) == "Darwin" ] #should only install on a Mac
+if [ $(uname) == "Darwin" ] #should install only on a Mac
 then
-    if [ -f /usr/local/bin/backup_deleter ]
-    then #already installed
+    if [ -f /usr/local/bin/backup_deleter ] #check if already installed
+    then
         echo -e "\nScript already installed. Run it at any time using 'backup_deleter'."
         
-    else #continue installing
+    else #not installed, continue installing
         echo -e "\nDo you want to continue installation? Y/N"
         read choice
         
