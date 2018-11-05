@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo -e "\nThis is a script to manage local Time Machine backups that get created automatically on macOS High Sierra or above. Please use with caution and only on a Macintosh computer running macOS 10.13 or higher."
-
-echo -e "\n***I AM NOT RESPONSIBLE FOR ANY DAMAGE(S) THIS MAY CAUSE TO YOU OR YOUR LIFE.***"
-
 while true
 do
     backup=$(tmutil listlocalsnapshots / | head -1) #stores oldest backup name
