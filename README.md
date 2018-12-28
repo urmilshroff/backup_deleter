@@ -1,4 +1,4 @@
-# macOS local Time Machine backup deleter
+# macOS local Time Machine backup deleter
 
 This is a shell script to manage and delete all local Time Machine backups that get created automatically on macOS versions -ge High Sierra 10.13.
 
